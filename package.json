@@ -12,5 +12,9 @@
   "description": "",
   "dependencies": {
     "concurrently": "^4.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.14.1",
+    "eslint-plugin-react": "^7.12.4"
   }
 }

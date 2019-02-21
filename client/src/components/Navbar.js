@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link, withRouter } from "react-router-dom";
 
 class Landing extends Component {
-	logOut(e) {
+    logOut(e) {
 		e.preventDefault();
 		localStorage.removeItem("usertoken");
 		this.props.history.push(`/`);

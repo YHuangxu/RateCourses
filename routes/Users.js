@@ -5,7 +5,7 @@ const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt-nodejs");
 
 
-const User = require("../models/User");
+const User = require("../models/userModel");
 users.use(cors());
 
 process.env.SECRET_KEY = "secret";
@@ -15,9 +15,9 @@ users.post("/register", (req, res) => {
 	const today = new Date();
 	const userDate = {
 		username: req.body.username,
-		password: req.body.password，
-		first_name: req.body.first_name,
-		last_name: req.body.last_name,
+		password: req.body.password,
+		firstname: req.body.firstname,
+		lastname: req.body.lastname,
 		email: req.body.email,
 		bio: req.body.bio,
 		created: today
@@ -33,7 +33,7 @@ users.post("/register", (req, res) => {
 				userData.password = hash
 				User.create(userData)
 				.then(user => {
-					re.json({
+					res.json({
 						status: user.username + "Registered!"
 					})
 				})
@@ -61,8 +61,8 @@ users.post("/login", (req, res) => {
 					const payload = {
 						_id = user._id,
 						username = user.username,
-						first_name = user.first_name,
-						last_name = user.last_name,
+						firstname = user.firstname,
+						lastname = user.lastname,
 						email = user.email,
 						bio = user.bio,
 						image = user.image

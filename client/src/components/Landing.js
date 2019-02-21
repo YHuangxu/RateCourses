@@ -1,20 +1,19 @@
-import React, {Component} from  "react"
+import React from 'react';
+import { Jumbotron, Container, Media, Row, Col } from 'reactstrap';
+import './style/style.css';
 
-class Landing extends Component {
-	render(){
-		return (
-			<div className = "container">
-				<div className = "jumbotron mt-5">
-					<div className = "col-sm-8 mx-auto">
-					   <h1 className = "text-center"> WELCOME</h1>
-					</div>
-				</div>
-			</div>
-
-
-
-		)
-	}
-}
+const Landing = (props) => {
+  return (
+      <Jumbotron fluid>
+        <Container fluid>
+          <h1 className="display-3">Welcome!</h1>
+          <p className="lead">This is a course & professor rating site for NEU-SV students</p>
+        </Container>
+      <Row>
+      <img src={require("../data/neu.jpg")} alt="NEU" />
+      </Row>
+    </Jumbotron>
+  );
+};
 
 export default Landing;

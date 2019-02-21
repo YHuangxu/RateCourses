@@ -125,7 +125,7 @@ class Register extends Component {
 
 							<button
 								type="submit"
-								className="btn btn-lg btn-primary btn-block"
+								className="btn btn-lg btn-info btn-block"
 							>
 								Register
 							</button>

@@ -18,7 +18,7 @@ app.use(cors());
 app.use(logger("dev"));
 
 // this is our MongoDB database
-const dbRoute = "mongodb://meng:dbdb123@ds145895.mlab.com:45895/ratecourse";
+const dbRoute = "////////";
 // connects our back end code with the database
 mongoose.connect(
     dbRoute,
